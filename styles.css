@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+*{
+	margin: 0px;
+	font-family: 'Work Sans', sans-serif;
+}
+
+img{
+	display: inline-block;
+}
+
+body {
+	font-family: 'Work Sans', sans-serif !important;
+}
+
+
+.grid-master{
+	background: lightgray;
+	display: grid;
+	grid-template-columns:  10% 1fr 10%;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: " header  header header"
+						 " . body ."
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 5% 1fr 1fr 1fr 5%;
+	grid-template-rows:  auto auto auto 1fr 1fr 1fr 1%;
+	grid-template-areas: ". img  img img ."
+						 ". main-text main-text main-text ."
+						 ". main main main ."
+						 ". contact contact contact ."
+						 ". footer footer footer ."
+						 ". . . . .";
+	grid-area: body;
+
+}
+
+.grid-item {
+	box-shadow: rgba(0, 0, 0, 1);
+}
+
+.profile-img {
+	border: 4px solid white;
+	border-radius: 50%;
+	width: 50%;
+	height: auto;
+}
+
+
+#header {
+	grid-area: header;
+}
+
+#intro {
+	grid-area: intro;
+	background: #023946;
+}
+
+#banner {
+	width: 100%;
+	height: 241px;
+	position: center;
+}
+
+#img {
+	grid-area: img;
+}
+
+#img-circle {
+	grid-row: img-start / 2;
+	grid-column: img-start / 2;
+	padding-left: 20px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.main-text {
+	grid-area: main-text;
+	background: #336699;
+	font-size: 36px;
+}
+
+#main {
+	grid-area: main;
+	display: flex;
+	height: auto;
+}
+
+#contact {
+	background: Lavender;
+	grid-area: contact;
+}
+
+#footer {
+	background: white;
+	grid-area: footer;
+}
+
+.intro-text {
+	position: relative;
+	color: white;
+	padding: 10px;
+	font-family: 'Zhi Mang Xing', cursive;
+	grid-row: img-start/2;
+	grid-column: img-start/4;
+	margin-top: 20%;
+}
+
+form {
+	margin: 10px;
+}
+
+h4 {
+	padding-left: 10px;
+}
+
+#no-pad {
+	margin: 0;
+	padding 0;
+
+}

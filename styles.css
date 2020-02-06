@@ -29,20 +29,22 @@ body {
 	background: white;
 	display: grid;
 	grid-template-columns:  5% 1fr 5%;
-	grid-template-rows: auto 1fr;
+	grid-template-rows: auto 2fr auto;
 	grid-template-areas: " header  header header"
 						 " . body ."
+						 " footer footer footer";
 }
 
 
 .grid-container {
 	display: grid;
 	grid-template-columns: 5% 2fr 2fr 2fr 1% 1fr 5%;
-	grid-template-rows:  auto auto auto 1fr;
+	grid-template-rows:  auto auto auto 4fr 1fr;
 	grid-template-areas: ". img  img img . aside ."
 						 ". main-text main-text main-text . aside ."
 						 ". main main main . aside ."
-						 ". contact contact contact . aside .";
+						 ". contact contact contact . aside ."
+						 ". . . . . . .";
 	grid-area: body;
 
 }
@@ -58,6 +60,10 @@ body {
 	height: auto;
 }
 
+#footer {
+	grid-area: footer;
+	
+}
 
 #aside {
 	grid-area: aside;
@@ -123,6 +129,11 @@ body {
 	grid-row: img-start/2;
 	grid-column: img-start/4;
 	margin-top: 20%;
+}
+
+.list-flex {
+	display: flex;
+	justify-content: space-between;
 }
 
 form {

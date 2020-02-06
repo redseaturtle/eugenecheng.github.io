@@ -13,26 +13,36 @@ body {
 	font-family: 'Work Sans', sans-serif !important;
 }
 
+@media only screen and (max-width: 768px) {
+	#main {
+		grid-area: main;
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		height: auto;
+		flex-wrap: wrap;
+	}
+}
+
 
 .grid-master{
-	background: lightgray;
+	background: white;
 	display: grid;
-	grid-template-columns:  10% 1fr 10%;
+	grid-template-columns:  5% 1fr 5%;
 	grid-template-rows: auto 1fr;
 	grid-template-areas: " header  header header"
 						 " . body ."
 }
 
+
 .grid-container {
 	display: grid;
-	grid-template-columns: 5% 1fr 1fr 1fr 5%;
-	grid-template-rows:  auto auto auto 1fr 1fr 1fr 1%;
-	grid-template-areas: ". img  img img ."
-						 ". main-text main-text main-text ."
-						 ". main main main ."
-						 ". contact contact contact ."
-						 ". footer footer footer ."
-						 ". . . . .";
+	grid-template-columns: 5% 2fr 2fr 2fr 1% 1fr 5%;
+	grid-template-rows:  auto auto auto 1fr;
+	grid-template-areas: ". img  img img . aside ."
+						 ". main-text main-text main-text . aside ."
+						 ". main main main . aside ."
+						 ". contact contact contact . aside .";
 	grid-area: body;
 
 }
@@ -46,6 +56,17 @@ body {
 	border-radius: 50%;
 	width: 50%;
 	height: auto;
+}
+
+
+#aside {
+	grid-area: aside;
+	background: gray;
+	grid-gap: 10px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+
 }
 
 
@@ -85,17 +106,13 @@ body {
 #main {
 	grid-area: main;
 	display: flex;
+	width: 100%;
 	height: auto;
 }
 
 #contact {
-	background: Lavender;
-	grid-area: contact;
-}
-
-#footer {
 	background: white;
-	grid-area: footer;
+	grid-area: contact;
 }
 
 .intro-text {
@@ -119,5 +136,6 @@ h4 {
 #no-pad {
 	margin: 0;
 	padding 0;
+	width: 100%;
 
 }

@@ -67,11 +67,12 @@ body {
 
 #aside {
 	grid-area: aside;
-	background: gray;
+	
 	grid-gap: 10px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
+	width: 100%;
 
 }
 
